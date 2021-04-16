@@ -1,4 +1,4 @@
-## Calculator
+# Calculator
 This a graphical UI calculator built using  Python and Tkinter Library.
 
 ## AUTHOR
@@ -9,17 +9,17 @@ This is a simple calculator program that performs mathematical operations and re
 
 ## SETUP INSTRUCTIONS
  
-### Prerequisites
+#### *Prerequisites*
 1.Python installed
 2.Terminal / Git Bash
 3.IDE of your Choice
 4.Tkinter Library
 
-### Steps To Follow
-* Install Tkinter library using pip command in your Terminal <mark>pip install tk.</mark>
+#### *Steps To Follow*
+* Install Tkinter library using pip command in your Terminal `pip install tk.`
 * Clone this Repository in your terminal https://github.com/FranklyneKibet/Calculator.git
-* cd into the folder and open IDE <mark>code.</mark>
-* open Terminal inside IDE and run the program <mark>calculator.py</mark>
+* cd into the folder and open IDE code.
+* open Terminal inside IDE and run the program `calculator.py`
 
 ## Technologies Used
 * Git.

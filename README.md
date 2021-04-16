@@ -18,7 +18,7 @@ This is a simple calculator program that performs mathematical operations and re
 #### *Steps To Follow*
 * Install Tkinter library using pip command in your Terminal `pip install tk.`
 * Clone this Repository in your terminal https://github.com/FranklyneKibet/Calculator.git
-* cd into the folder and open IDE code.
+* cd into the folder and open IDE `code.`
 * open Terminal inside IDE and run the program `calculator.py`
 
 ## Technologies Used

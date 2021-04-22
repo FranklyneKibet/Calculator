@@ -1,6 +1,7 @@
 from tkinter import *
 import parser
 from math import factorial
+from math import sin,cos,tan,degrees,radians
 
 
 root = Tk()
@@ -27,6 +28,7 @@ def calculate():
     try:  
         a=parser.expr(entire_string).compile() 
         result = eval(a)
+        clear_all()
         display.insert(0,result)
     except Exception: 
         clear_all()
@@ -43,6 +45,12 @@ def get_operations(operator):
 #Function that deletes the output
 def clear_all():  
     display.delete(0,END)
+    
+#Trigonometry function
+def trig(x,num):
+    result = x(display.get(num))
+    display.insert(0,result)
+    print('okay')
     
 #Delete button
 def delete(): 
@@ -66,6 +74,7 @@ def fact() :
         clear_all()
         display.insert(0,'Error')
         
+
 
 
 #Adding Buttons 
@@ -96,9 +105,9 @@ Button(root,text=')', padx=41,pady=20, command = lambda : get_operations(')')).g
 Button(root,text='Del', padx=34,pady=20, command = lambda: delete()).grid(row=1,column=0)
 Button(root,text='ln', padx=40,pady=20).grid(row=1,column=1)
 Button(root,text='x!', padx=38,pady=20, command=lambda: fact()).grid(row=2,column=0)
-Button(root,text='sin', padx=37.4,pady=20).grid(row=2,column=1)
-Button(root,text='cos', padx=35.6,pady=20).grid(row=3,column=1)
-Button(root,text='tan', padx=36.4,pady=20).grid(row=4,column=1)
+Button(root,text='sin', padx=37.4,pady=20, command=lambda: trig(sin)).grid(row=2,column=1)
+Button(root,text='cos', padx=35.6,pady=20, command=lambda: trig(cos)).grid(row=3,column=1)
+Button(root,text='tan', padx=36.4,pady=20, command=lambda: trig(tan)).grid(row=4,column=1)
 Button(root,text='π', padx=38,pady=20, command = lambda : get_operations('*3.14')).grid(row=3,column=0)
 Button(root,text='log', padx=33,pady=20).grid(row=4,column=0)
 Button(root,text='Exp', padx=32,pady=20, command = lambda : get_operations('**')).grid(row=5,column=0)
